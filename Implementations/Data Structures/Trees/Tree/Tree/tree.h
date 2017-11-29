@@ -134,8 +134,7 @@ public:
       return false;
     if (currNode->data == value)
       return true;
-    find(currNode->left, value);
-    find(currNode->right, value);
+    return find(currNode->left, value) || find(currNode->right, value);
   }
 
   bool find(int value)
@@ -146,9 +145,13 @@ public:
     return find(root_, value);
   }
 
+  int height(Node* currNode)
+  {
+  }
+
   int height(void)
   {
-    return 1;
+    if()
   }
 
   int min(void)

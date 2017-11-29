@@ -83,6 +83,15 @@ void TestFind3(void)
   std::cout << tree.find(5) << std::endl;
 }
 
+void TestFind4(void)
+{
+  Tree tree;
+  for (int i = 0; i < 10; ++i)
+    tree.insert(i);
+  for (int i = 10; i < 20; ++i)
+    std::cout << tree.find(i) << std::endl;
+}
+
 int main(void)
 {
   TestInsert1();
@@ -90,6 +99,7 @@ int main(void)
   TestFind1();
   TestFind2();
   TestFind3();
+  TestFind4();
   //TestInsertRecurv1();
   //TestInsertRecurv2();
   return 0;
